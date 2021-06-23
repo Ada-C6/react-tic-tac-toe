@@ -20,7 +20,7 @@ const Board = ({ squares, onClickCallback }) => {
   const squareList = generateSquareComponents(squares, onClickCallback);
   console.log(squareList);
   return <div className="grid" >
-    {squareList.map(square => <Square key={square.id} square={square} />)}
+    {squareList.map(square => <Square key={square.id} id={square.id} value={square.value} />)}
   </div>
 }
 
