@@ -4,7 +4,7 @@ import Square from './Square';
 import PropTypes from 'prop-types';
 
 
-const generateSquareComponents = (squares, onClickCallback) => {
+const generateSquareComponents = (squares, onClickCallback) => { // TODO: Is this parameter even needed?
   const flattened = [];
   for (let row = 0; row < 3; row += 1) {
     for (let col = 0; col < 3; col +=1) {
@@ -18,9 +18,9 @@ const generateSquareComponents = (squares, onClickCallback) => {
 
 const Board = ({ squares, onClickCallback }) => {
   const squareList = generateSquareComponents(squares, onClickCallback);
-  console.log(squareList);
+
   return <div className="grid" >
-    {squareList.map(square => <Square key={square.id} id={square.id} value={square.value} />)}
+    {squareList.map(square => <Square key={square.id} id={square.id} value={square.value} onClickCallback={onClickCallback} />)}
   </div>
 }
 
