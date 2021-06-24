@@ -71,7 +71,7 @@ const App = () => {
       return squares[2][0].value;
     }
 
-    // Diagnols
+    // Diagonals
     if (squares[0][0].value === squares[1][1].value && squares[1][1].value === squares[2][2].value && squares[0][0].value !== '') {
       return squares[0][0].value;
     }
